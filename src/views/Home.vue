@@ -13,6 +13,23 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+  data () {
+    return {
+      aa: 0
+    }
+  },
+  methods: {
+    noCoverageFunction () {
+      let a = 0
+      a++
+      this.aa = a
+    }
+  },
+  beforeCreate () {
+    let a = 10
+    a++
+    this.aa = a
   }
 }
 </script>
